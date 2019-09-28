@@ -29,6 +29,26 @@ All of my "Markdown Notebook" I've ever created.
   - [HTML, CSS, JS, Selector](/MT/MT-02M.md)
   - [SVG](MT/MT-02F.md)
 - **[OOP](/OOP) (Object-Oriented Programming - Java)**
+  - Scanner
+  - Naming
+  - Typecasting
+  - Encapsulation
+  - Polymorphism
+  - Constructor
+  - `this`, `super`
+  - `final`, `static`
+  - Abstract Class / Interface
 - **[DSA](/DSA) (Data Structure and Algorithms)**
+  - Data Type
+  - Linear List
+  - Stack
+  - Queue
+  - Tree
+  - Binary Tree
+  - Binary Search Tree
+  - Binary Expression Tree
+  - AVL Tree
+  - Huffman Code/Tree
+  - Heap
   
 **Disclaimer** - Correctness is *not* guaranteed!
