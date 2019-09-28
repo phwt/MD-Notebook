@@ -6,9 +6,9 @@ All of my "Markdown Notebook". I've ever created.
 ## Index
 
 - [Python](/Python) (Problem Solving in Information Technology)
-- [Multimedia Technology](/MT)
+- [MT](/MT) (Multimedia Technology - HTML, JS, CSS, SVG Basics)
 - [C](/C) (Computer Programming)
-- [OOP](/OOP) (Object-Oriented Programming)
+- [OOP](/OOP) (Object-Oriented Programming - Java)
 - [DSA](/DSA) (Data Structure and Algorithms)
   
 **Disclaimer** - Correctness is *not* guaranteed!
