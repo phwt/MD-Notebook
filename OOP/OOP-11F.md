@@ -20,6 +20,20 @@
 |  public  |      Y     |       Y      |     N    |     N     |
 |  default |      Y     |       N      |     N    |     N     |
 
+|Symbol|Description|
+|:--------------:|:----------:|
+| + | public |
+| - | private |
+| # | protected |
+| AbstractClass* | abstract |
+| <\<Interface>> | interface |
+| <–– | extends |
+| <-- | implements |
+| ◇–– | composite |
+| method()* | abstract |
+| final | final |
+| static | static |
+
 ## GUI
 ```java
 JPanel panel = new JPanel(new GridLayout(3, 2));
