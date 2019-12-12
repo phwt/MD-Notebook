@@ -17,8 +17,8 @@
 | <-- | implements |
 | ◇–– | composite |
 | method()* | abstract |
-| final | final |
-| static | static |
+| **final** | final |
+| static | underline |
 
 ## GUI
 ```java
