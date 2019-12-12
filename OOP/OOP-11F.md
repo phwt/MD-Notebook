@@ -1,18 +1,4 @@
-# Object Oriented Programming
-
-## Naming
-
-- **Class**: `PascalCase`
-- **Variable**: `lowercase`
-- **Method**: `camelCase`
-- **Constant**: `UPPER_CASE`
-
 ## Access Modifier
-- `public` (+) | Accessible by every class.
-- `private` (-) | Internal access only. - User `getter` `setter`
-- `protected` (#) | Accessibly by subclass.
-- `default` | Package-level access.
-
 | Modifier | Same class | Same package | Subclass | Any Class |
 |:--------:|:----------:|:------------:|:--------:|:---------:|
 |  public  |      Y     |       Y      |     Y    |     Y     |
@@ -47,11 +33,9 @@ this.getContentPane();
 ## Event Handling
 ```java
 class SampleEvent implements ActionListener {
-
     public sampleEvent() {
         button.addActionListener(this);
     }
-
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(btn)) { }
     }
@@ -78,14 +62,11 @@ label.addMouseListener(new MouseAdapter() {
 ---
 ```java
 this.addWindowListener(new WindowAdapter() {
-    public void windowClosing(WindowEvent windowEvent) { }
     public void windowActivated(WindowEvent e) { }
     public void windowClosed(WindowEvent e) { }
     public void windowClosing(WindowEvent e) { }
     public void windowDeactivated(WindowEvent e) { }
-    public void windowDeiconified(WindowEvent e) { }
     public void windowGainedFocus(WindowEvent e) { }
-    public void windowIconified(WindowEvent e) { }
     public void windowLostFocus(WindowEvent e) { }
     public void windowOpened(WindowEvent e) { }
     public void windowStateChanged(WindowEvent e) { }
@@ -114,7 +95,6 @@ string_list.remove("hello");
 string_list.remove(0);
 string_list.clear();
 ```
-
 ## Thread
 ```java
 class SampleThread implements Runnable {
@@ -138,32 +118,24 @@ if (f.exists()) {
     FileInputStream fin = new FileInputStream(f);
     ObjectInputStream oin = new ObjectInputStream(fin);
     out_obj = oin.readObject();
-    fin.close();
-    oin.close();
+    fin.close(); oin.close();
 }
 ```
 ```java
 FileOutputStream fout = new FileOutputStream("data.dat");
 ObjectOutputStream oout = new ObjectOutputStream(fout);
 oout.writeObject(...);
-fout.close();
-oout.close();
+fout.close(); oout.close();
 ```
 ---
 ```java
 DataInputStream din = new DataInputStream(fin);
-din.readDouble();
-din.readBoolean();
-din.readByte();
-din.readChar();
-din.readDouble();
-din.readFloat();
-din.readInt();
-din.readLong();
-din.readShort();
-din.readUnsignedByte();
-din.readUnsignedShort();
-din.readUTF();
+din.readDouble(); din.readBoolean();
+din.readByte(); din.readChar();
+din.readDouble(); din.readFloat();
+din.readInt(); din.readLong();
+din.readShort(); din.readUnsignedByte();
+din.readUnsignedShort(); din.readUTF();
 ```
 
 ## Others
