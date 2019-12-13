@@ -1,16 +1,13 @@
 ## Access Modifier
 | Modifier | Same class | Same package | Subclass | Any Class |
 |:--------:|:----------:|:------------:|:--------:|:---------:|
-|  public  |      Y     |       Y      |     Y    |     Y     |
-|  private |      Y     |       Y      |     Y    |     N     |
-|  public  |      Y     |       Y      |     N    |     N     |
-|  default |      Y     |       N      |     N    |     N     |
+|  + public  |      Y     |       Y      |     Y    |     Y     |
+|  # protected |      Y     |       Y      |     Y    |     N     |
+|  default  |      Y     |       Y      |     N    |     N     |
+|  - private |      Y     |       N      |     N    |     N     |
 
 |Symbol|Description|
 |:--------------:|:----------:|
-| + | public |
-| - | private |
-| # | protected |
 | AbstractClass* | abstract |
 | <\<Interface>> | interface |
 | <–– | extends |
@@ -29,6 +26,7 @@ this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 HIDE_ON_CLOSE / DISPOSE_ON_CLOSE / EXIT_ON_CLOSE
 this.setLocationByPlatform(true);
 this.getContentPane();
+label.setIcon(new ImageIcon(getClass().getResource("/P1/p96.png")));
 ```
 ## Event Handling
 ```java
