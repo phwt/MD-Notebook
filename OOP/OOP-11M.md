@@ -62,10 +62,10 @@ int num = Integer.parseInt(str);
 
 | Modifier | Same class | Same package | Subclass | Any Class |
 |:--------:|:----------:|:------------:|:--------:|:---------:|
-|  public  |      Y     |       Y      |     Y    |     Y     |
-|  private |      Y     |       Y      |     Y    |     N     |
-|  public  |      Y     |       Y      |     N    |     N     |
-|  default |      Y     |       N      |     N    |     N     |
+|  + public  |      Y     |       Y      |     Y    |     Y     |
+|  # protected |      Y     |       Y      |     Y    |     N     |
+|  default  |      Y     |       Y      |     N    |     N     |
+|  - private |      Y     |       N      |     N    |     N     |
 
 ### Inheritance
 - **Superclass** | To be inherit by subclass.
