@@ -65,9 +65,9 @@ describe("Register", () => {
     // Correctly redirect to register page
     cy.location("pathname").should("equal", "/register");
 
-    cy.get("[data-cy=username").type(username);
-    cy.get("[data-cy=email").type(email);
-    cy.get("[data-cy=password").type(password);
+    cy.get("[data-cy=username]").type(username);
+    cy.get("[data-cy=email]").type(email);
+    cy.get("[data-cy=password]").type(password);
 
     cy.get("form").submit();
 
@@ -127,3 +127,70 @@ describe("Create New Post", () => {
   });
 });
 ```
+
+## Testing Network Requests
+
+- **No Stubbed Responses**
+  - True end-to-end
+  - Great for SSR
+  - Tests will be slower
+- **Stubbed Responses**
+  - Can control response - e.g. body, status, header, delay
+  - Fast (< 20ms)
+  - Perfect for JSON response
+  - No server endpoint coverage
+  - Avoid when testing critical path - e.g. Login
+
+```js
+// No Stubbed Response
+cy.request({
+  method: "POST",
+  url: "",
+  body: {},
+  headers: {},
+});
+```
+
+```js
+cy.server();
+cy.route(`/api/articles/${slug}comments`, {
+  // Stubbed Response
+  // comments: [{/*...*/}, {/*...*/}],
+});
+```
+
+## Screenshots and Videos
+
+- Default
+  - Cypress will automatically take a screenshot on failed test if running from a command line
+  - Cypress will automatically record a video of every test
+
+```js
+cy.screenshot("path/and/file/name");
+```
+
+## Code Coverage
+
+```zsh
+npm i -D @cypress/code-coverage istanbul-lib-coverage nyc babel-plugin-istanbul
+```
+
+`/cypress/support/index.js`
+
+```js
+import "@cypress/code-coverage/support";
+```
+
+`/cypress/plugins/index.js`
+
+```js
+module.exports = (on, config) => {
+  on("task", require("@cypress/code-coverage/task"));
+};
+```
+
+Coverage result will generated in `/coverage/` after running all tests
+
+## Plugins
+
+https://docs.cypress.io/plugins/
